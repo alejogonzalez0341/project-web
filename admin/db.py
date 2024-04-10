@@ -1,9 +1,19 @@
+from dotenv import dotenv_values
+
+
+config_env= dotenv_values(".env")
+
+USERNAME = config_env["USERNAME"]
+PASSWORD= config_env["PASSWORD"]
+EMAIL= config_env["EMAIL"]
+FULLNAME= config_env["FULLNAME"]
+
 admin_user_db= {
     "gregory":{
-        "username": "gregory",
-        "fullname": "administrador",
-        "email": "admin@gmail.com",
-        "password": "$pbkdf2-sha256$29000$F0JIqTXmXKtVqnWu9X4vpQ$RowiT9RDvZ1ollOuWGkJd/E0v/wDfcDQSJGxR9Es5pA",
+        "username": USERNAME,
+        "fullname": FULLNAME,
+        "email": EMAIL,
+        "password": PASSWORD,
         "disabled": False
     },
 }

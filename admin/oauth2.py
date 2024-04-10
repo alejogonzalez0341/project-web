@@ -6,8 +6,7 @@ from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from zoneinfo import ZoneInfo
 
-import os
-from dotenv import load_dotenv, dotenv_values
+from dotenv import dotenv_values
 
 from passlib.hash import pbkdf2_sha256
 
