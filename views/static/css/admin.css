@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    height: 100vh;
+}
+
+.section-left {
+    background-color: black;
+    color: green;
+}
+
+.section-right {
+    background-color: lightcoral;
+    color: blue;
+}

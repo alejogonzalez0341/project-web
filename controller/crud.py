@@ -3,6 +3,8 @@ from sqlalchemy.orm import Session
 from models.models import MPorducts
 from models.schemas import Products
 
+from fastapi import HTTPException, status, UploadFile
+from os import getcwd
 
 def get_id(db:Session, id:int):
     db.query(MPorducts).filter(MPorducts.id == id).first()
@@ -25,3 +27,4 @@ def created_product(db: Session, products= Products):
 
 def get_all_products(db: Session, skip:int = 0, limit: int = 100):
     return db.query(MPorducts).offset(skip).limit(limit=limit).all()
+
