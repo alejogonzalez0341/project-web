@@ -52,7 +52,7 @@ def authenticate_user(db, username: str, password: str):
 def create_token(data: dict, time_expire: Union[datetime, None]= None):
     data_copy= data.copy()
     if time_expire is None:
-        expire= datetime.now(ZoneInfo("UTC")) + timedelta(minutes=15)
+        expire= datetime.now(ZoneInfo("UTC")) + timedelta(seconds=10)
     else:
         expire= datetime.now(ZoneInfo("UTC")) + time_expire
     data_copy.update({"exp": expire})

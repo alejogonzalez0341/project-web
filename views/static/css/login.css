@@ -72,6 +72,7 @@ body {
     justify-content: space-around;
     font-size: 15px;
     margin: -15px 0 15;
+    color: #fff;
 }
 
 .remember-me_ label input {
