@@ -1,15 +1,28 @@
-from fastapi import UploadFile
 from pydantic import BaseModel
 from datetime import datetime
 
-class Products(BaseModel):
-    id: int
+class ProductsCreate(BaseModel):
+    id:int
     name: str
     type_product: str
     descript: str
     price: int
-    creation_time: datetime
-
-
+    
     class Config:
             from_attributes = True
+
+                    
+class GetProduct(BaseModel):
+    id: int
+    type_product: str
+    descript: str
+    price: int
+    
+    
+#schema para posductos del banner
+class BannerProductRequest(BaseModel):
+    title:str
+    description:str
+    
+class ResponseBanner(BannerProductRequest):
+    id:int

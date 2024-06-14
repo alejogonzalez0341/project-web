@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>editar elemento del banner</h2>
+    <form action="/admin/banner/update/{{context.id}}" method="post">
+
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id" placeholder="{{context.id}}"><br>
+
+        <label for="title">Titulo:</label><br>
+        <input type="text" id="title" name="title" placeholder="{{context.title}}" required><br>
+
+        <label for="description">Descriptcion:</label><br>
+        <input type="text" id="description" name="description" placeholder="{{context.description}}" required><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+
+</html>

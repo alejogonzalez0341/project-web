@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="http://localhost:8000/admin">admin</a>
+    <a href="http://localhost:8000/admin/banner">banner</a>
+    <a href="http://localhost:8000/admin/catalogo">catálogo</a>
+    <a href="http://localhost:8000/admin/nosotros">nosotros</a>
+    <h2>nosotros</h2>
+
+    <div class="buttons">
+        <a href="/admin/nosotros/crear">Crear Nuevo Registro</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Correo</th>
+                <th>Dirección</th>
+                <th>Telefono</th>
+                <th>WhatsApp</th>
+                <th>Facebook</th>
+                <th>Instagram</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in context %}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.description}}</td>
+                <td>
+                    <a href="/admin/banner/editar/{{item.id}}">Editar</a>
+                    <a href="/admin/banner/delete/{{item.id}}">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
